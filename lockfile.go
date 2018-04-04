@@ -15,7 +15,7 @@ import (
 // lock will look for the .lock file named after the main program and check
 // among the running PIDs whether it's still running.
 // It returns the new locking file's name and any errors.
-func lock() (string, error) {
+func Lock() (string, error) {
 	fileBaseName := strings.TrimRight(filepath.Base(os.Args[0]),
 		filepath.Ext(os.Args[0]))
 	lockFile := fmt.Sprintf("./%s.lock", fileBaseName)
